@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Jungle Explorer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gojo-void-black: #0b0c10;
+      --gojo-dark-slate: #1f2833;
+      --gojo-white: #f8f9fa;
+      --six-eyes-cyan: #00f0ff;
+      --lapse-blue: #0077ff;
+      --reversal-red: #ff0055;
+      --hollow-purple: #9d4edd;
+      --domain-accent: #c77dff;
+      --orbitron-font: 'Orbitron', sans-serif;
+    }
+
+    body { 
+      position: relative; 
+      background-color: var(--gojo-void-black);
+      color: var(--gojo-white);
+      font-family: 'Exo 2', sans-serif;
+    }
+
+    h1, h2, .navbar-brand {
+      font-family: var(--orbitron-font);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    /* Carousel Slides with Glowing Angles */
+    .jungle-slide {
+      height: 220px;
+      text-align: center;
+      padding-top: 80px;
+      font-size: 2rem;
+      font-family: var(--orbitron-font);
+      font-weight: 700;
+      color: var(--gojo-white);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      border-bottom: 3px solid var(--six-eyes-cyan);
+    }
+
+    .slide-rainforest { 
+      background: linear-gradient(135deg, #0f5132, var(--six-eyes-cyan)); 
+    }
+    .slide-river { 
+      background: linear-gradient(135deg, var(--lapse-blue), var(--six-eyes-cyan)); 
+    }
+    .slide-night { 
+      background: linear-gradient(135deg, var(--gojo-dark-slate), var(--hollow-purple), var(--reversal-red)); 
+    }
+
+    /* Glowing Sticky Navbar */
+    #jungleNav {
+      background-color: var(--gojo-dark-slate) !important;
+      border-bottom: 2px solid var(--six-eyes-cyan);
+      box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);
+    }
+
+    .navbar-brand {
+      color: var(--six-eyes-cyan) !important;
+      text-shadow: 0 0 8px var(--six-eyes-cyan);
+    }
+
+    .nav-link {
+      font-family: var(--orbitron-font);
+      color: var(--gojo-white) !important;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-item.active .nav-link {
+      color: var(--six-eyes-cyan) !important;
+      text-shadow: 0 0 10px var(--six-eyes-cyan);
+    }
+
+    /* Section Cards with Custom Glowing Borders */
+    .section {
+      padding: 50px 30px;
+      margin: 40px 0;
+      border-radius: 16px;
+      background-color: var(--gojo-dark-slate);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    #rainforest { 
+      border: 2px solid var(--six-eyes-cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    }
+    #rainforest:hover {
+      box-shadow: 0 0 25px var(--six-eyes-cyan);
+    }
+    #rainforest h2 { color: var(--six-eyes-cyan); }
+
+    #river { 
+      border: 2px solid var(--lapse-blue);
+      box-shadow: 0 0 15px rgba(0, 119, 255, 0.3);
+    }
+    #river:hover {
+      box-shadow: 0 0 25px var(--lapse-blue);
+    }
+    #river h2 { color: var(--lapse-blue); }
+
+    #night { 
+      border: 2px solid var(--hollow-purple);
+      box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+    }
+    #night:hover {
+      box-shadow: 0 0 25px var(--hollow-purple);
+    }
+    #night h2 { color: var(--domain-accent); }
+
+    /* Carousel Indicators */
+    .carousel-indicators li {
+      background-color: var(--six-eyes-cyan);
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#jungleNav" data-offset="70">
+
+  <!-- TOPIC 1, 2, 3: CAROUSEL -->
+  <div id="jungleCarousel" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+      <li data-target="#jungleCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#jungleCarousel" data-slide-to="1"></li>
+      <li data-target="#jungleCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active jungle-slide slide-rainforest">
+        🌿 Rainforest Adventure
+      </div>
+
+      <div class="carousel-item jungle-slide slide-river">
+        🐊 Jungle River Journey
+      </div>
+
+      <div class="carousel-item jungle-slide slide-night">
+        🌙 Night Jungle Safari
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#jungleCarousel" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#jungleCarousel" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
+  </div>
+
+  <!-- TOPIC 4: SCROLLSPY NAVBAR -->
+  <nav id="jungleNav" class="navbar navbar-expand-sm sticky-top">
+    <span class="navbar-brand">🌿 Jungle Explorer</span>
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#rainforest">Rainforest</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#river">River</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#night">Night Safari</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <div id="rainforest" class="section">
+      <h2>🌿 Rainforest Adventure</h2>
+      <p>Walk through tall trees and spot monkeys, parrots, snakes, and colourful butterflies.</p>
+    </div>
+
+    <div id="river" class="section">
+      <h2>🐊 Jungle River Journey</h2>
+      <p>Follow the jungle river and discover crocodiles, frogs, fish, and water birds.</p>
+    </div>
+
+    <div id="night" class="section">
+      <h2>🌙 Night Jungle Safari</h2>
+      <p>Explore the jungle after sunset and look for owls, fireflies, bats, and leopards.</p>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
